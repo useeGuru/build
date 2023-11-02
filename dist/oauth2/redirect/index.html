@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  const token = new URLSearchParams(window.location.search).get('token');
+  if(token) {
+    localStorage.setItem("jwt_access_token", token);
+  } else {
+    localStorage.removeItem("jwt_access_token");
+  }
+  location.href = '/';
+</script>
+</html>
